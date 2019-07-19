@@ -29,9 +29,9 @@ static void init_sdl() {
 	SDL_GetVersion(&ver);
 
 	std::cout << "Found SDL version "
-	          << ver.major << "."
-	          << ver.minor << "."
-	          << ver.patch << "." << std::endl;
+	          << (int) ver.major << "."
+	          << (int) ver.minor << "."
+	          << (int) ver.patch << "." << std::endl;
 
 	auto ver_num = SDL_VERSIONNUM(ver.major, ver.minor, ver.patch);
 
