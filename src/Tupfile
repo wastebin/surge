@@ -1,6 +1,7 @@
 include_rules
 
 CXFLAGS += $(SDL_CXFLAGS)
+LDFLAGS += $(SDL_LDFLAGS)
 
 : foreach *.h++ |> !hx |>
 : foreach *.c++ |> !cx |> {objs}

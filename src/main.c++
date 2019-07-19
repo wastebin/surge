@@ -1,3 +1,5 @@
+#include <cstdlib>
+
 #include <iostream>
 
 #include <SDL2/SDL.h>
@@ -11,10 +13,10 @@
 static void init_sdl();
 
 int main(int argc, char **argv) {
-	bool ded = check_param(argc, argv, "-d")
-	        || check_param(argc, argv, "--dedicated");
+	//bool ded = check_param(argc, argv, "-d")
+	//        || check_param(argc, argv, "--dedicated");
 
-	double old_time, new_time;
+	//double old_time, new_time;
 
 	init_sdl();
 
@@ -29,7 +31,7 @@ static void init_sdl() {
 	std::cout << "Found SDL version "
 	          << ver.major << "."
 	          << ver.minor << "."
-	          << ver.patch << "." << endl;
+	          << ver.patch << "." << std::endl;
 
 	auto ver_num = SDL_VERSIONNUM(ver.major, ver.minor, ver.patch);
 
@@ -38,7 +40,7 @@ static void init_sdl() {
 		          << SDL_MIN_X << "."
 							<< SDL_MIN_Y << "."
 		          << SDL_MIN_Z << " of SDL to run me." << std::endl;
-		return 1;
+		exit(EXIT_FAILURE);
 	}
 
 	if (ver_num >= SDL_TOONEW) {
@@ -47,5 +49,6 @@ static void init_sdl() {
 		          << SDL_MIN_X << "."
 		          << SDL_MIN_Y << "."
 		          << SDL_MIN_Z << "." << std::endl;
+		exit(EXIT_FAILURE);
 	}
 }
