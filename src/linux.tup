@@ -1,0 +1,4 @@
+CX = g++
+
+SDL_CXFLAGS += `pkg-config sdl2 --cflags`
+SDL_LDFLAGS += `pkg-config sdl2 --libs`

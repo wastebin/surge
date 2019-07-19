@@ -1,0 +1,19 @@
+ifdef PROJ_ARCH
+include @(PROJ_ARCH).tup
+else
+include @(TUP_PLATFORM).tup
+endif
+
+PPFLAGS = $(CPPFLAGS)
+CXFLAGS = $(CXXFLAGS)
+
+CXFLAGS += -Wall
+
+CXFLAGS += -m64
+LDFLAGS += -m64
+
+!hx = |> ^ HX %f^ $(CX) $(PPFLAGS) -x c++-header -c %f |> %f.gch
+!cx = |> ^ CX %f^ $(CX) $(PPFLAGS) $(CXFLAGS) -c -o %o %f |> %B.o
+!ld = |> ^ LD %o^ $(CX) $(LDFLAGS) %f -o %o |>
+
+!cp = |> ^ CP %o^ cp %f %o |>

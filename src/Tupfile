@@ -1,0 +1,7 @@
+include_rules
+
+CXFLAGS += $(SDL_CXFLAGS)
+
+: foreach *.h++ |> !hx |>
+: foreach *.c++ |> !cx |> {objs}
+: {objs} |> !ld |> ../dist/surge
