@@ -3,6 +3,6 @@ include_rules
 CXFLAGS += $(SDL_CXFLAGS)
 LDFLAGS += $(SDL_LDFLAGS)
 
-: foreach *.h++ |> !hx |>
-: foreach *.c++ |> !cx |> {objs}
+: foreach *.hh |> !hx |> {chds}
+: foreach *.cc | {chds} |> !cx |> {objs}
 : {objs} |> !ld |> ../dist/surge

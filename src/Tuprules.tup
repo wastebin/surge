@@ -7,7 +7,9 @@ endif
 PPFLAGS = $(CPPFLAGS)
 CXFLAGS = $(CXXFLAGS)
 
-CXFLAGS += -Wall
+CXFLAGS += -Wall -Wfatal-errors
+
+PPFLAGS += -std=c++17
 
 CXFLAGS += -m64
 LDFLAGS += -m64
