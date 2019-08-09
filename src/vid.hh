@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef _VID_HH
-#define _VID_HH
-
 #include <variant>
 
 namespace vid {
@@ -31,5 +28,3 @@ struct vid::reses::spec { int w; int h; };
 struct vid::modes::none {};
 struct vid::modes::windowed {};
 struct vid::modes::fullscreen {};
-
-#endif

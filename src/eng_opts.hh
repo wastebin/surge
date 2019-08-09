@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef _ENG_OPTS_HH
-#define _ENG_OPTS_HH
-
 #include "grammar.hh"
 #include "vid.hh"
 
@@ -65,5 +62,3 @@ struct eng::opts::err::plain {
 	char **argv;
   int i;
 };
-
-#endif

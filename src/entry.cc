@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 
+#include "eng_errs.hh"
 #include "eng_main.hh"
 #include "eng_opts.hh"
 
@@ -11,6 +12,9 @@ int main(int argc, char **argv) {
 		eng::main(opts);
 
 		exit(EXIT_SUCCESS);
+	} catch (eng::err::comp comp) {
+		std::cerr << comp.invoc << ": "
+		          << comp.desc << ": " << comp.msg << std::endl;
 	} catch (eng::opts::err::dup dup) {
 		std::cerr << *dup.argv << ": forbidden duplicate "
 		          << dup.thing << " " << dup.argv[dup.i] << "." << std::endl;
