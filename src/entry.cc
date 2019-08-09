@@ -1,9 +1,9 @@
 #include <cstdlib>
 #include <iostream>
 
-#include "eng_errs.hh"
-#include "eng_main.hh"
-#include "eng_opts.hh"
+#include "eng::errs.hh"
+#include "eng::main.hh"
+#include "eng::opts.hh"
 
 int main(int argc, char **argv) {
 	try {

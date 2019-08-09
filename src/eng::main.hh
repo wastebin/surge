@@ -1,6 +1,6 @@
 #pragma once
 
-#include "eng_opts.hh"
+#include "eng::opts.hh"
 
 namespace eng {
 	void main(eng::opts&);

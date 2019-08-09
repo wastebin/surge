@@ -1,6 +1,6 @@
 #pragma once
 
-#include "eng_state.hh"
+#include "eng::state.hh"
 
 namespace eng {
   void update(unsigned int, eng::state&);

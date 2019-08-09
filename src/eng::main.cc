@@ -3,13 +3,13 @@
 
 #include <SDL2/SDL.h>
 
-#include "eng_errs.hh"
-#include "eng_opts.hh"
-#include "eng_state.hh"
-#include "eng_update.hh"
-#include "eng_render.hh"
+#include "eng::errs.hh"
+#include "eng::opts.hh"
+#include "eng::state.hh"
+#include "eng::update.hh"
+#include "eng::render.hh"
 
-#include "eng_main.hh"
+#include "eng::main.hh"
 
 #include "overload.hh"
 

@@ -2,7 +2,7 @@
 #include <cstring>
 #include <variant>
 
-#include "eng_opts.hh"
+#include "eng::opts.hh"
 
 eng::opts::opts(int argc, char **argv) :
 	mode(vid::modes::none {}),

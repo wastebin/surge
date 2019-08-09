@@ -1,8 +1,8 @@
 #include <SDL2/SDL.h>
 
-#include "eng_state.hh"
+#include "eng::state.hh"
 
-#include "eng_update.hh"
+#include "eng::update.hh"
 
 void eng::update(unsigned int ms, eng::state& st) {
 	SDL_Event e;
